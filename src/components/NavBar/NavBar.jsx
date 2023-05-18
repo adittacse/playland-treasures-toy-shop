@@ -6,7 +6,7 @@ const NavBar = ({ isLoggedIn, username }) => {
             <div className="container mx-auto flex items-center justify-between">
                 <div className="flex items-center">
                     <img src="/path/to/logo.png" alt="Website Logo" className="w-8 h-8 mr-2" />
-                    <span className="text-white font-bold text-lg">Playland Treasures</span>
+                    <span className="text-white font-bold text-lg">Toy Shop</span>
                 </div>
                 <div className="flex items-center space-x-4">
                     <a href="/" className="text-white hover:text-gray-300">Home</a>
@@ -30,7 +30,10 @@ const NavBar = ({ isLoggedIn, username }) => {
               </span>
                         </div>
                     ) : (
-                        <a href="/login" className="text-white hover:text-gray-300">Login</a>
+                        <>
+                            <a href="/login" className="text-white hover:text-gray-300">Login</a>
+                            <a href="/register" className="text-white hover:text-gray-300">Register</a>
+                        </>
                     )}
                 </div>
             </div>
