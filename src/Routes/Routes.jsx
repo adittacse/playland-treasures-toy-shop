@@ -3,6 +3,7 @@ import React from "react";
 import Main from "../components/Layout/Main.jsx";
 import Home from "../components/Home/Home/Home.jsx";
 import ErrorPage from "../components/ErrorPage/ErrorPage.jsx";
+import SignUp from "../components/SignUp/SignUp.jsx";
 
 const router = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "/register",
+                element: <SignUp></SignUp>
             }
         ]
     },

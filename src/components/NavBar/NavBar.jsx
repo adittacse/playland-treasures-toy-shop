@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 const NavBar = ({ isLoggedIn, username }) => {
     return (
@@ -32,7 +33,7 @@ const NavBar = ({ isLoggedIn, username }) => {
                     ) : (
                         <>
                             <a href="/login" className="text-white hover:text-gray-300">Login</a>
-                            <a href="/register" className="text-white hover:text-gray-300">Register</a>
+                            <Link to="/register" className="text-white hover:text-gray-300">Register</Link>
                         </>
                     )}
                 </div>
