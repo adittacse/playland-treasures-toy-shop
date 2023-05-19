@@ -61,7 +61,7 @@ const MyToys = () => {
                             </label>
                         </th>
                         <th>Name</th>
-                        <th>Category & Subcategory</th>
+                        <th>Category</th>
                         <th>Price & Ratings</th>
                         <th></th>
                     </tr>
@@ -79,7 +79,7 @@ const MyToys = () => {
                     <tr>
                         <th></th>
                         <th>Name</th>
-                        <th>Category & Subcategory</th>
+                        <th>Category</th>
                         <th>Price & Ratings</th>
                         <th></th>
                     </tr>

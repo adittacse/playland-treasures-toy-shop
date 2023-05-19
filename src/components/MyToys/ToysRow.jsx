@@ -4,7 +4,7 @@ import '@smastrom/react-rating/style.css';
 import {Link} from "react-router-dom";
 
 const ToysRow = ({ toy, handleDelete }) => {
-    const {_id, toyName, picture, category, subCategory, price, ratingFloat, quantity, description} = toy;
+    const {_id, toyName, picture, category, price, ratingFloat, quantity, description} = toy;
     
     return (
         <tr>
@@ -29,7 +29,6 @@ const ToysRow = ({ toy, handleDelete }) => {
             <td>
                 <div>
                     <div className="font-bold">{category}</div>
-                    <div className="text-sm opacity-50">{subCategory}</div>
                 </div>
             </td>
             <td>

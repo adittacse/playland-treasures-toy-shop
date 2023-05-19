@@ -4,32 +4,12 @@ import Swal from 'sweetalert2';
 
 const AddToy = () => {
     const {user} = useContext(AuthContext);
-    const [success, setSuccess] = useState("");
-    const [error, setError] = useState("");
     
     const [selectedCategory, setSelectedCategory] = useState('');
-    const [selectedSubcategory, setSelectedSubcategory] = useState('');
     
     const handleCategoryChange = (event) => {
         const category = event.target.value;
         setSelectedCategory(category);
-        setSelectedSubcategory('');
-    };
-    
-    const handleSubcategoryChange = (event) => {
-        setSelectedSubcategory(event.target.value);
-    };
-    
-    const getSubcategories = () => {
-        // Define the subcategories for each category
-        const subcategoriesByCategory = {
-            '': [],
-            "marvel": ['Iron Man', 'Spider-Man', 'Black Widow'],
-            "avengers": ['Captain America', 'Thor', 'Hulk'],
-            "star-wars": ['Luke Skywalker', 'Darth Vader', 'Yoda'],
-        };
-        
-        return subcategoriesByCategory[selectedCategory] || [];
     };
     
     const handleAddToy = (event) => {
@@ -41,7 +21,6 @@ const AddToy = () => {
         const sellerName = form.sellerName.value;
         const email = form.sellerEmail.value;
         let category = form.category.value;
-        const subCategory = form.subCategory.value;
         const price = form.price.value;
         const ratings = form.ratings.value;
         const quantity = form.quantity.value;
@@ -74,7 +53,6 @@ const AddToy = () => {
             sellerName,
             email,
             category,
-            subCategory,
             price,
             ratingFloat,
             quantity,
@@ -142,17 +120,6 @@ const AddToy = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Subcategory</span>
-                        </label>
-                        <select name="subCategory" className="select select-bordered" value={selectedSubcategory} onChange={handleSubcategoryChange} required>
-                            <option disabled value="">Select Subcategory</option>
-                            {getSubcategories().map((subcategory) => (
-                                <option key={subcategory} value={subcategory}>{subcategory}</option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className="form-control">
-                        <label className="label">
                             <span className="label-text">Toy Price</span>
                         </label>
                         <input type="text" name="price" placeholder="Toy Price" className="input input-bordered" required />
@@ -169,11 +136,13 @@ const AddToy = () => {
                         </label>
                         <input type="text" name="quantity" placeholder="Available Quantity" className="input input-bordered" required />
                     </div>
-                    <div className="form-control">
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+                    <div className="form-control mt-6">
                         <label className="label">
                             <span className="label-text">Toy Description</span>
                         </label>
-                        <input type="text" name="description" placeholder="Toy Description" className="input input-bordered" required />
+                        <textarea name="description" placeholder="Toy Description" className="textarea textarea-bordered" id="description" cols="30" rows="5"></textarea>
                     </div>
                 </div>
                 <div className="form-control mt-10">
