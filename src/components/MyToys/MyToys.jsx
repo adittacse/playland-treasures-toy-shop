@@ -7,7 +7,7 @@ const MyToys = () => {
     const {user} = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     
-    const url = `http://localhost:3000/toys?email=${user?.email}`;
+    const url = `https://playland-treasures-server.vercel.app/toys?email=${user?.email}`;
     useEffect( () => {
         fetch(url)
             .then(res => res.json())
@@ -28,7 +28,7 @@ const MyToys = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/toys/${id}`, {
+                fetch(`https://playland-treasures-server.vercel.app/toys/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())

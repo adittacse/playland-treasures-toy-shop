@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: "/update-toy/:id",
                 element: <PrivateRoute><UpdateToy></UpdateToy></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/toy/${params.id}`)
+                loader: ({params}) => fetch(`https://playland-treasures-server.vercel.app/toy/${params.id}`)
             },
             {
                 path: "/toys",
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: "/toy/:id",
                 element: <PrivateRoute><ViewDetailsToy></ViewDetailsToy></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/toy/${params.id}`)
+                loader: ({params}) => fetch(`https://playland-treasures-server.vercel.app/toy/${params.id}`)
             }
         ]
     },
