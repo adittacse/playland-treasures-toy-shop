@@ -55,9 +55,9 @@ const AddToy = () => {
             category = "Star Wars";
         }
         
-        const ratingInt = parseFloat(ratings);
+        const ratingFloat = parseFloat(ratings);
         
-        if (!(ratingInt < 0) && !(ratingInt > 5)) {
+        if (!(ratingFloat < 0) && !(ratingFloat > 5)) {
             // valid ratings
         } else {
             Swal.fire({
@@ -67,6 +67,37 @@ const AddToy = () => {
             })
             return;
         }
+        
+        const toy = {
+            toyName,
+            picture,
+            sellerName,
+            sellerEmail,
+            category,
+            subCategory,
+            price,
+            ratingFloat,
+            quantity,
+            description
+        }
+        
+        fetch("http://localhost:3000/toys", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(toy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Booked Successfully!',
+                        'Service Booked Successfully!',
+                        'success'
+                    )
+                }
+            })
     }
     
     return (
