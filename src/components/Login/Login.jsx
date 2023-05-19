@@ -63,7 +63,7 @@ const Login = () => {
                             <div className="form-control">
                                 <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                                 <label className="label mt-5">
-                                    <p className="label-text-alt">New to website? <Link to="/register" className="link link-hover">Please Register</Link></p>
+                                    <p className="label-text-alt">New to website? <Link to="/register" className="text-[#FF3811] font-bold link link-hover">Please Register</Link></p>
                                 </label>
                             </div>
                             <div className="form-control mt-6">
