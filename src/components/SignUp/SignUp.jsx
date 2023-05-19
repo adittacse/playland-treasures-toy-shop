@@ -18,6 +18,7 @@ const SignUp = () => {
         
         const form = event.target;
         const name = form.name.value;
+        const photoUrl = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
         const confirmPassword = form.confirmPassword.value;
@@ -52,7 +53,7 @@ const SignUp = () => {
                         setError(error.message);
                     });
                 updateProfile(createdUser, {
-                    displayName: name,
+                    displayName: name, photoURL: photoUrl
                 })
                     .then(() => {})
                     .catch(error => {
@@ -88,7 +89,7 @@ const SignUp = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
-                <div className="w-1/3 mr-44">
+                <div className="w-1/2 mr-44">
                     <img src={img} alt="Register Image"/>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -99,10 +100,15 @@ const SignUp = () => {
                                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
                             </div>
                             <div className="form-control mb-5">
+                                <input type="text" name="photoURL" placeholder="Photo URL" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control mb-5">
                                 <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <input type="password" name="password" placeholder="Password" className="input input-bordered mb-5" required />
+                            </div>
+                            <div className="form-control">
                                 <input type="password" name="confirmPassword" placeholder="Confirm Password" className="input input-bordered" required />
                                 <label className="label mt-5">
                                     <p className="label-text-alt">Already have an account? <Link to="/login" className="link link-hover">Please Login</Link></p>
