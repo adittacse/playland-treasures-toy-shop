@@ -7,6 +7,7 @@ import SignUp from "../components/SignUp/SignUp.jsx";
 import Login from "../components/Login/Login.jsx";
 import AddToy from "../components/AddToy/AddToy.jsx";
 import MyToys from "../components/MyToys/MyToys.jsx";
+import PrivateRoute from "./PrivateRoute.jsx";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addtoy",
-                element: <AddToy></AddToy>
+                element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
             },
             {
                 path: "/my-toys",
