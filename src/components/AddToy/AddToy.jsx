@@ -92,8 +92,8 @@ const AddToy = () => {
             .then(data => {
                 if (data.insertedId) {
                     Swal.fire(
-                        'Booked Successfully!',
-                        'Service Booked Successfully!',
+                        'Added Successfully!',
+                        'Toy Added Successfully!',
                         'success'
                     )
                 }
