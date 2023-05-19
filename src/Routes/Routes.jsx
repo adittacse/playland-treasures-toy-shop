@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 element: <Login></Login>
             },
             {
-                path: "/addtoy",
+                path: "/add-toy",
                 element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
             },
             {

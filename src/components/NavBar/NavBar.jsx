@@ -24,7 +24,7 @@ const NavBar = () => {
                             <a href="/my-toys" className="text-white hover:text-gray-300">
                                 My Toys
                             </a>
-                            <a href="/addtoy" className="text-white hover:text-gray-300">
+                            <a href="/add-toy" className="text-white hover:text-gray-300">
                                 Add A Toy
                             </a>
                         </>
