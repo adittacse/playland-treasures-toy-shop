@@ -1,4 +1,6 @@
 import React from 'react';
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 
 const ToysRow = ({ toy }) => {
     const {_id, toyName, picture, category, subCategory, price, ratingFloat, quantity, description} = toy;
@@ -32,7 +34,10 @@ const ToysRow = ({ toy }) => {
             <td>
                 <div>
                     <div className="font-bold">${price}</div>
-                    <div className="text-sm opacity-50">{ratingFloat} Star</div>
+                    <div className="text-sm opacity-50 mt-1">
+                        <Rating style={{ maxWidth: 150 }} value={ratingFloat} readOnly />
+                    </div>
+                    <div className="text-sm opacity-50 mt-1">{ratingFloat} Ratings</div>
                 </div>
             </td>
             <th>
