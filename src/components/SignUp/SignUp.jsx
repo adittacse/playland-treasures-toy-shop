@@ -105,8 +105,8 @@ const SignUp = () => {
                             <div className="form-control mb-5">
                                 <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                             </div>
-                            <div className="form-control">
-                                <input type="password" name="password" placeholder="Password" className="input input-bordered mb-5" required />
+                            <div className="form-control mb-5">
+                                <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <input type="password" name="confirmPassword" placeholder="Confirm Password" className="input input-bordered" required />
