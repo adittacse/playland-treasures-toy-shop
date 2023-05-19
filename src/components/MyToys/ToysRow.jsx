@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import {Link} from "react-router-dom";
 
 const ToysRow = ({ toy, handleDelete }) => {
     const {_id, toyName, picture, category, subCategory, price, ratingFloat, quantity, description} = toy;
@@ -43,7 +44,9 @@ const ToysRow = ({ toy, handleDelete }) => {
             <th>
                 <div className="flex flex-col">
                     <button className="btn bg-error text-white">View Details</button>
-                    <button className="btn bg-error text-white">Update Toy</button>
+                    <Link to={`/update-toy/${_id}`}>
+                        <button className="btn bg-error text-white">Update Toy</button>
+                    </Link>
                 </div>
             </th>
         </tr>
