@@ -6,6 +6,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage.jsx";
 import SignUp from "../components/SignUp/SignUp.jsx";
 import Login from "../components/Login/Login.jsx";
 import AddToy from "../components/AddToy/AddToy.jsx";
+import MyToys from "../components/MyToys/MyToys.jsx";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/addtoy",
                 element: <AddToy></AddToy>
+            },
+            {
+                path: "/my-toys",
+                element: <MyToys></MyToys>
             }
         ]
     },

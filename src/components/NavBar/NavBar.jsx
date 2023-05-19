@@ -21,7 +21,7 @@ const NavBar = () => {
                     </a>
                     {user && (
                         <>
-                            <a href="/mytoys" className="text-white hover:text-gray-300">
+                            <a href="/my-toys" className="text-white hover:text-gray-300">
                                 My Toys
                             </a>
                             <a href="/addtoy" className="text-white hover:text-gray-300">
