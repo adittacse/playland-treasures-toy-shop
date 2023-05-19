@@ -1,9 +1,22 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {AuthContext} from "../../Providers/AuthProviders.jsx";
+import {Link} from "react-router-dom";
+import ViewDetailsToy from "../ViewDetailsToy/ViewDetailsToy.jsx";
 
 const AllToysRow = ({ toy }) => {
     const {user} = useContext(AuthContext);
     const {_id, toyName, picture, sellerName, category, price, ratingFloat, quantity, description} = toy;
+    
+    const [modalOpen, setModalOpen] = useState(false);
+    
+    const handleModalOpen = () => {
+        setModalOpen(true);
+        <ViewDetailsToy toy={toy} onClose={handleModalClose} />
+    };
+    
+    const handleModalClose = () => {
+        setModalOpen(false);
+    };
     
     return (
         <tr>
@@ -40,11 +53,13 @@ const AllToysRow = ({ toy }) => {
                     <div className="font-bold">{quantity} Piece</div>
                 </div>
             </td>
-            <th>
+            <td>
                 <div className="flex flex-col">
-                    <button className="btn bg-error text-white">View Details</button>
+                    <Link to={`/toy/${_id}`}>
+                        <button className="btn bg-error text-white">View Details</button>
+                    </Link>
                 </div>
-            </th>
+            </td>
         </tr>
     );
 };

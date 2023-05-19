@@ -4,14 +4,13 @@ import AllToysRow from "./AllToysRow.jsx";
 const AllToys = () => {
     const [toys, setToys] = useState([]);
     
-    const url = `http://localhost:3000/toys`;
     useEffect( () => {
-        fetch(url)
+        fetch("http://localhost:3000/toys")
             .then(res => res.json())
             .then(data => {
                 setToys(data);
-            })
-    },[url]);
+            });
+    },[]);
     
     return (
         <div>
@@ -32,7 +31,8 @@ const AllToys = () => {
                     <tbody>
                     {/* row */}
                     {
-                        toys.map(toy => <AllToysRow key={toy._id} toy={toy}></AllToysRow>)
+                        toys.map(toy => <AllToysRow key={toy._id}
+                                                    toy={toy}></AllToysRow>)
                     }
                     </tbody>
                     {/* foot */}
