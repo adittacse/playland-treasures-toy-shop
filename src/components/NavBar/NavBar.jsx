@@ -13,29 +13,21 @@ const NavBar = () => {
                     <span className="text-white font-bold text-lg">Toy Shop</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                    <a href="/" className="text-white hover:text-gray-300">
-                        Home
-                    </a>
-                    <a href="/toys" className="text-white hover:text-gray-300">
-                        All Toys
-                    </a>
+                    <a href="/" className="text-white hover:text-gray-300">Home</a>
+                    <a href="/toys" className="text-white hover:text-gray-300">All Toys</a>
                     {user && (
                         <>
-                            <a href="/my-toys" className="text-white hover:text-gray-300">
-                                My Toys
-                            </a>
-                            <a href="/add-toy" className="text-white hover:text-gray-300">
-                                Add A Toy
-                            </a>
+                            <a href="/my-toys" className="text-white hover:text-gray-300">My Toys</a>
+                            <a href="/add-toy" className="text-white hover:text-gray-300">Add A Toy</a>
                         </>
                     )}
-                    <a href="/blogs" className="text-white hover:text-gray-300">
-                        Blogs
-                    </a>
-                    
+                    <a href="/blogs" className="text-white hover:text-gray-300">Blogs</a>
+                </div>
+                
+                <div className="flex items-end space-x-4">
                     {user ? (
                         <div className="dropdown dropdown-hover dropdown-end">
-                            <img src={user.photoURL} alt="User Profile" className="w-8 h-8 m-1 rounded-full"/>
+                            <img src={user.photoURL} alt="User Profile" className="w-10 h-10 m-1 rounded-full"/>
                             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><a>{user.displayName}</a></li>
                                 <li><Link onClick={() => logOut()
@@ -47,12 +39,8 @@ const NavBar = () => {
                         </div>
                     ) : (
                         <>
-                            <Link to="/login" className="text-white hover:text-gray-300">
-                                Login
-                            </Link>
-                            <Link to="/register" className="text-white hover:text-gray-300">
-                                Register
-                            </Link>
+                            <Link to="/login" className="text-white hover:text-gray-300">Login</Link>
+                            <Link to="/register" className="text-white hover:text-gray-300">Register</Link>
                         </>
                     )}
                 </div>
