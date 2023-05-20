@@ -32,7 +32,8 @@ const ToysCategory = () => {
     }
     
     return (
-        <div className="text-center">
+        <div className="text-center mb-20">
+            <h2 className="text-4xl font-bold mb-10">Shop By Category</h2>
             <Tabs>
                 <TabList>
                     <Tab>Marvel</Tab>
