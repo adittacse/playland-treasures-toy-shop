@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import AllToysRow from "./AllToysRow.jsx";
+import useTitle from "../../hooks/useTitle.jsx";
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
+    useTitle("All Toys");
     
     useEffect( () => {
         fetch("https://playland-treasures-server.vercel.app/toys")

@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
 import {AuthContext} from "../../Providers/AuthProviders.jsx";
 import Swal from 'sweetalert2';
+import useTitle from "../../hooks/useTitle.jsx";
 
 const AddToy = () => {
     const {user} = useContext(AuthContext);
-    
+    useTitle("Add A Toy");
     const [selectedCategory, setSelectedCategory] = useState('');
     
     const handleCategoryChange = (event) => {

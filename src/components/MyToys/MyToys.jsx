@@ -2,10 +2,12 @@ import React, {useContext, useEffect, useState} from 'react';
 import {AuthContext} from "../../Providers/AuthProviders.jsx";
 import ToysRow from "./ToysRow.jsx";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle.jsx";
 
 const MyToys = () => {
     const {user} = useContext(AuthContext);
     const [toys, setToys] = useState([]);
+    useTitle("My Toys");
     
     const url = `https://playland-treasures-server.vercel.app/toys?email=${user?.email}`;
     useEffect( () => {

@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import {useLoaderData} from "react-router-dom";
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import useTitle from "../../hooks/useTitle.jsx";
 
 const ViewDetailsToy = () => {
     const toy = useLoaderData();
+    useTitle("Toy Details");
     const {_id, toyName, picture, sellerName, email, category, price, ratingFloat, quantity, description} = toy;
     
     return (

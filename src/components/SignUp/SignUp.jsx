@@ -4,12 +4,13 @@ import {AuthContext} from "../../Providers/AuthProviders.jsx";
 import {updateProfile} from "firebase/auth";
 import img from "../../assets/login.jpg";
 import { FaGoogle } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle.jsx";
 
 const SignUp = () => {
     const {createUser, googleSignIn, logOut} = useContext(AuthContext);
     const [success, setSuccess] = useState("");
+    useTitle("Register");
     const [error, setError] = useState("");
-    // const img = "https://i.ibb.co/QYXwgWv/5500661.jpg";
     
     const handleSignUp = (event) => {
         event.preventDefault();
