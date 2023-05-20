@@ -35,24 +35,24 @@ const ToysCategory = () => {
         <div className="text-center mb-20">
             <h2 className="text-4xl font-bold mb-10">Shop By Category</h2>
             <Tabs>
-                <TabList>
+                <TabList className="flex flex-wrap justify-center mb-10">
                     <Tab>Marvel</Tab>
                     <Tab>Avengers</Tab>
                     <Tab>Star Wars</Tab>
                 </TabList>
                 
                 <TabPanel>
-                    <div className="flex mx-auto justify-center gap-10">
+                    <div className="flex mx-auto justify-center gap-10 flex-wrap">
                         {marvelToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="flex mx-auto justify-center gap-10">
+                    <div className="flex mx-auto justify-center gap-10 flex-wrap">
                         {avengersToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="flex mx-auto justify-center gap-10">
+                    <div className="flex mx-auto justify-center gap-10 flex-wrap">
                         {starWarsToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
