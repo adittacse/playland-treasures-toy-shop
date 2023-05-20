@@ -12,9 +12,9 @@ const ToysCategory = () => {
         fetch('https://playland-treasures-server.vercel.app/toys')
             .then(response => response.json())
             .then(data => {
-                const avengersToysData = data.filter(toy => toy.category === "Avengers");
-                const marvelToysData = data.filter(toy => toy.category === "Marvel");
-                const starWarsToysData = data.filter(toy => toy.category === "Star Wars");
+                const avengersToysData = getRandomToysByCategory(data, "Avengers");
+                const marvelToysData = getRandomToysByCategory(data, "Marvel");
+                const starWarsToysData = getRandomToysByCategory(data, "Star Wars");
                 
                 setAvengersToys(avengersToysData);
                 setMarvelToys(marvelToysData);
@@ -25,9 +25,10 @@ const ToysCategory = () => {
             });
     }, []);
     
-    const renderLimitedCards = (toys) => {
-        const limitedToys = toys.slice(0, 3);
-        return limitedToys.map(toy => <ToyCard key={toy._id} toy={toy} />);
+    const getRandomToysByCategory = (toys, category, limit = 3) => {
+        const categoryToys = toys.filter(toy => toy.category === category);
+        const shuffledToys = categoryToys.sort(() => 0.5 - Math.random());
+        return shuffledToys.slice(0, limit);
     }
     
     return (
@@ -41,17 +42,17 @@ const ToysCategory = () => {
                 
                 <TabPanel>
                     <div className="flex mx-auto justify-center gap-10">
-                        {renderLimitedCards(marvelToys)}
+                        {marvelToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className="flex mx-auto justify-center gap-10">
-                        {renderLimitedCards(avengersToys)}
+                        {avengersToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div className="flex mx-auto justify-center gap-10">
-                        {renderLimitedCards(starWarsToys)}
+                        {starWarsToys.map(toy => <ToyCard key={toy._id} toy={toy} />)}
                     </div>
                 </TabPanel>
             </Tabs>
