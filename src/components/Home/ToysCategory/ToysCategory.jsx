@@ -33,9 +33,9 @@ const ToysCategory = () => {
     
     return (
         <div className="text-center mb-20">
-            <h2 className="text-4xl font-bold mb-10">Shop By Category</h2>
+            <h2 className="text-4xl text-white font-bold mb-10">Shop By Category</h2>
             <Tabs>
-                <TabList className="flex flex-wrap justify-center mb-10">
+                <TabList className="flex flex-wrap justify-center text-white mb-10">
                     <Tab>Marvel</Tab>
                     <Tab>Avengers</Tab>
                     <Tab>Star Wars</Tab>

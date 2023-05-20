@@ -7,8 +7,8 @@ const BonusSectionTwo = () => {
         <section className="py-12 mb-8">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center justify-center">
-                    <h2 className="text-4xl font-bold mb-4">Discover the Joy of Toys</h2>
-                    <p className="text-lg text-center mb-6">
+                    <h2 className="text-white text-4xl font-bold mb-4">Discover the Joy of Toys</h2>
+                    <p className="text-white text-lg text-center mb-6">
                         Our toy shop offers a wide selection of toys for all ages. From educational toys to action figures, puzzles to board games, there's something for everyone. Experience the magic of play and create lasting memories with our carefully curated collection.
                     </p>
                     <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">

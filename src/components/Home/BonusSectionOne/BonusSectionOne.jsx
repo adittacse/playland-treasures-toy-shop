@@ -8,8 +8,8 @@ const BonusSectionOne = () => {
             <div className="container mx-auto px-4">
                 <div className="flex flex-col lg:flex-row items-center gap-4">
                     <div className="lg:w-1/2 lg:pr-10">
-                        <h2 className="text-4xl lg:text-5xl font-bold mb-4">Discover the Joy of Toys</h2>
-                        <p className="text-lg mb-6">
+                        <h2 className="text-white text-4xl lg:text-5xl font-bold mb-4">Discover the Joy of Toys</h2>
+                        <p className="text-white text-lg mb-6">
                             Explore our wide collection of toys that will bring endless fun and joy to children of all ages. From educational toys to imaginative playsets, we have something for every child's interest and curiosity.
                         </p>
                         <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Shop Now</button>
