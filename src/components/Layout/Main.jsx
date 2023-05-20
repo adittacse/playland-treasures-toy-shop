@@ -5,7 +5,7 @@ import Footer from "../Footer/Footer.jsx";
 
 const Main = () => {
     return (
-        <div>
+        <div className="px-20 mx-auto">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>
