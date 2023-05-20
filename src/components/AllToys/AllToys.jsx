@@ -6,7 +6,7 @@ const AllToys = () => {
     const [toys, setToys] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const toysPerPage = 5;
+    const toysPerPage = 20;
     useTitle('All Toys');
     
     useEffect(() => {
