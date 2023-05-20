@@ -12,7 +12,6 @@ const BonusSectionOne = () => {
                         <p className="text-white text-lg mb-6">
                             Explore our wide collection of toys that will bring endless fun and joy to children of all ages. From educational toys to imaginative playsets, we have something for every child's interest and curiosity.
                         </p>
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">Shop Now</button>
                     </div>
                     <div className="lg:w-1/2">
                         <img src={img} alt="Toy Shop" className="w-full h-auto rounded-xl" />

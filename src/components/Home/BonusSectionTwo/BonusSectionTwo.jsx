@@ -11,9 +11,6 @@ const BonusSectionTwo = () => {
                     <p className="text-white text-lg text-center mb-6">
                         Our toy shop offers a wide selection of toys for all ages. From educational toys to action figures, puzzles to board games, there's something for everyone. Experience the magic of play and create lasting memories with our carefully curated collection.
                     </p>
-                    <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full">
-                        Explore Now
-                    </button>
                 </div>
             </div>
         </section>
