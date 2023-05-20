@@ -1,22 +1,8 @@
-import React, {useContext, useState} from 'react';
-import {AuthContext} from "../../Providers/AuthProviders.jsx";
+import React from 'react';
 import {Link} from "react-router-dom";
-import ViewDetailsToy from "../ViewDetailsToy/ViewDetailsToy.jsx";
 
 const AllToysRow = ({ toy }) => {
-    const {user} = useContext(AuthContext);
-    const {_id, toyName, picture, sellerName, category, price, ratingFloat, quantity, description} = toy;
-    
-    const [modalOpen, setModalOpen] = useState(false);
-    
-    const handleModalOpen = () => {
-        setModalOpen(true);
-        <ViewDetailsToy toy={toy} onClose={handleModalClose} />
-    };
-    
-    const handleModalClose = () => {
-        setModalOpen(false);
-    };
+    const {_id, toyName, picture, sellerName, category, price, ratingFloat, quantity} = toy;
     
     return (
         <tr>

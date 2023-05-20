@@ -4,7 +4,7 @@ import '@smastrom/react-rating/style.css';
 import {Link} from "react-router-dom";
 
 const ToysRow = ({ toy, handleDelete }) => {
-    const {_id, toyName, picture, category, price, ratingFloat, quantity, description} = toy;
+    const {_id, toyName, picture, category, price, ratingFloat, quantity} = toy;
     
     return (
         <tr>
