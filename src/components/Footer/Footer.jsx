@@ -8,8 +8,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
                         <img src="/path/to/logo.png" alt="Website Logo" className="w-8 h-8 mb-4" />
-                        <p className="text-white font-bold text-lg">Toy Shop</p>
-                        <p>&copy; {new Date().getFullYear()} Toy Shop. All rights reserved.</p>
+                        <p className="text-white font-bold text-lg">Playland Treasures</p>
                     </div>
                     <div>
                         <h4 className="text-white font-bold mb-4">Contact Us</h4>
