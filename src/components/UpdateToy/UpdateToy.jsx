@@ -85,7 +85,7 @@ const UpdateToy = () => {
     
     return (
         <div>
-            <h2 className="text-center text-3xl mt-10 mb-10">Add A Toy</h2>
+            <h2 className="text-center text-3xl mt-10 mb-10">Update Toy</h2>
             <form onSubmit={handleUpdateToy}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="form-control">
@@ -151,7 +151,7 @@ const UpdateToy = () => {
                     </div>
                 </div>
                 <div className="form-control mt-10">
-                    <input className="btn text-white bg-[#FF3811] btn btn-block" type="submit" value="Add Toy"/>
+                    <input className="btn text-white bg-[#FF3811] btn btn-block" type="submit" value="Update Toy"/>
                 </div>
             </form>
             <div className="card-body">
