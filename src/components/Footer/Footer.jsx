@@ -2,13 +2,15 @@ import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+    const logo = "https://i.ibb.co/WzH30fw/Screenshot-6.png";
+    
     return (
         <footer className="bg-gray-800 text-gray-300 py-8">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
-                        <img src="/path/to/logo.png" alt="Website Logo" className="w-8 h-8 mb-4" />
-                        <p className="text-white font-bold text-lg">Playland Treasures</p>
+                        <img src={logo} alt="Website Logo" className="w-48 h-12 mb-4" />
+                        <p className="text-white font-bold text-lg">Best Toy Shop in Your Country</p>
                     </div>
                     <div>
                         <h4 className="text-white font-bold mb-4">Contact Us</h4>
