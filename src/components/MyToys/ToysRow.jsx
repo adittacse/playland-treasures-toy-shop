@@ -41,10 +41,12 @@ const ToysRow = ({ toy, handleDelete }) => {
                 </div>
             </td>
             <th>
-                <div className="flex flex-col">
-                    <button className="btn bg-error text-white">View Details</button>
+                <div className="flex flex items-center justify-center">
+                    <Link to={`/toy/${_id}`}>
+                        <button className="btn bg-error text-white">View Details</button>
+                    </Link>
                     <Link to={`/update-toy/${_id}`}>
-                        <button className="btn bg-error text-white">Update Toy</button>
+                        <button className="btn bg-error text-white w-full">Update Toy</button>
                     </Link>
                 </div>
             </th>
