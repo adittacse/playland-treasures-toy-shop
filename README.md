@@ -1,6 +1,6 @@
 ## About Playland Treasures Toy Shop
 * It's a toy shop.
-* This website created using React, Tailwind, DaisyUI, MongoDB.
+* This website created using React, Tailwind, DaisyUI, MongoDB, express js.
 * Data loaded from server side.
 * User can login and register in this shop using email and google account.
 * Only logged-in users can add toys.
