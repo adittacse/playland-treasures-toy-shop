@@ -7,6 +7,7 @@ import useTitle from "../../hooks/useTitle.jsx";
 const MyToys = () => {
     const {user} = useContext(AuthContext);
     const [toys, setToys] = useState([]);
+    const [sortedToys, setSortedToys] = useState([]);
     useTitle("My Toys");
     
     const url = `https://playland-treasures-server.vercel.app/toys?email=${user?.email}`;
@@ -49,6 +50,11 @@ const MyToys = () => {
         })
     }
     
+    useEffect(() => {
+        const sortedToys = [...toys].sort((a, b) => a.price - b.price);
+        setSortedToys(sortedToys);
+    }, [toys]);
+    
     return (
         <div className="mb-10">
             <h2 className="text-center text-5xl mt-10 mb-10">My Total Toys: {toys.length}</h2>
@@ -70,11 +76,9 @@ const MyToys = () => {
                     </thead>
                     <tbody>
                     {/* row */}
-                    {
-                        toys.map(toy => <ToysRow key={toy._id}
-                                                 toy={toy}
-                                                 handleDelete={handleDelete}></ToysRow>)
-                    }
+                    {sortedToys.map(toy => (
+                        <ToysRow key={toy._id} toy={toy} handleDelete={handleDelete} />
+                    ))}
                     </tbody>
                     {/* foot */}
                     <tfoot>
