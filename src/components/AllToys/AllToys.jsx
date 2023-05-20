@@ -4,6 +4,7 @@ import useTitle from "../../hooks/useTitle.jsx";
 
 const AllToys = () => {
     const [toys, setToys] = useState([]);
+    const [searchQuery, setSearchQuery] = useState("");
     useTitle("All Toys");
     
     useEffect( () => {
@@ -14,9 +15,25 @@ const AllToys = () => {
             });
     },[]);
     
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+    };
+    
+    const filteredToys = toys.filter(toy =>
+        toy.toyName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    
     return (
         <div>
             <h2 className="text-center text-5xl mt-10 mb-10">All Toys</h2>
+            <div className="flex justify-center mb-6">
+                <input
+                    type="text"
+                    className="border border-gray-300 rounded px-4 py-2"
+                    placeholder="Search Toy Here"
+                    value={searchQuery}
+                    onChange={handleSearchChange}/>
+            </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full mb-16">
                     {/* head */}
@@ -33,7 +50,7 @@ const AllToys = () => {
                     <tbody>
                     {/* row */}
                     {
-                        toys.map(toy => <AllToysRow key={toy._id} toy={toy}></AllToysRow>)
+                        filteredToys.map(toy => <AllToysRow key={toy._id} toy={toy}></AllToysRow>)
                     }
                     </tbody>
                     {/* foot */}
