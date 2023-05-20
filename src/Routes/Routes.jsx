@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute.jsx";
 import UpdateToy from "../components/UpdateToy/UpdateToy.jsx";
 import AllToys from "../components/AllToys/AllToys.jsx";
 import ViewDetailsToy from "../components/ViewDetailsToy/ViewDetailsToy.jsx";
+import Blogs from "../components/Blogs/Blogs.jsx";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
                 path: "/toy/:id",
                 element: <PrivateRoute><ViewDetailsToy></ViewDetailsToy></PrivateRoute>,
                 loader: ({params}) => fetch(`https://playland-treasures-server.vercel.app/toy/${params.id}`)
+            },
+            {
+                path: "/blogs",
+                element: <Blogs></Blogs>
             }
         ]
     },
