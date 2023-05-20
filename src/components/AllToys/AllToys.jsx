@@ -31,8 +31,7 @@ const AllToys = () => {
                     <tbody>
                     {/* row */}
                     {
-                        toys.map(toy => <AllToysRow key={toy._id}
-                                                    toy={toy}></AllToysRow>)
+                        toys.map(toy => <AllToysRow key={toy._id} toy={toy}></AllToysRow>)
                     }
                     </tbody>
                     {/* foot */}
