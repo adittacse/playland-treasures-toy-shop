@@ -6,7 +6,7 @@ const BonusSectionOne = () => {
     return (
         <section className="toy-shop-section py-10">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col lg:flex-row items-center">
+                <div className="flex flex-col lg:flex-row items-center gap-4">
                     <div className="lg:w-1/2 lg:pr-10">
                         <h2 className="text-4xl lg:text-5xl font-bold mb-4">Discover the Joy of Toys</h2>
                         <p className="text-lg mb-6">
