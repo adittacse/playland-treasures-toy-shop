@@ -1,12 +1,13 @@
 import React from 'react';
 import useTitle from "../../../hooks/useTitle.jsx";
+import ToysCategory from "../ToysCategory/ToysCategory.jsx";
 
 const Home = () => {
     useTitle("Home");
     
     return (
         <div>
-            <h2>This is home</h2>
+            <ToysCategory></ToysCategory>
         </div>
     );
 };
