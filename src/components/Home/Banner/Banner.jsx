@@ -5,7 +5,7 @@ import "./Banner.css";
 
 const Banner = () => {
     return (
-        <div className="mb-20">
+        <div className="mb-10">
             <Carousel showThumbs={false} infiniteLoop autoPlay interval={5000} transitionTime={500} emulateTouch swipeable showArrows>
                 <div>
                     <img  src="https://images.unsplash.com/photo-1521714161819-15534968fc5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Slide 1" />
