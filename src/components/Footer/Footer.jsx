@@ -5,7 +5,7 @@ const Footer = () => {
     const logo = "https://i.ibb.co/WzH30fw/Screenshot-6.png";
     
     return (
-        <footer className="bg-gray-800 text-gray-300 py-8">
+        <footer className="bg-gray-800 text-gray-300 py-8 border-t-4 border-red-700">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
