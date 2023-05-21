@@ -49,7 +49,7 @@ const AllToys = () => {
                 />
             </div>
             <div className="overflow-x-auto w-full">
-                <table className="table w-full mb-16">
+                <table className="table w-full mb-10">
                     <thead>
                     <tr>
                         <th>Toy Name</th>
@@ -77,7 +77,7 @@ const AllToys = () => {
                     </tfoot>
                 </table>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-10">
                 {
                     Array.from({ length: totalPages }, (_, index) => index + 1).map(
                     page => <button key={page}
