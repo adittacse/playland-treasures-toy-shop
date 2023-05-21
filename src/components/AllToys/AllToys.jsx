@@ -38,7 +38,7 @@ const AllToys = () => {
     
     return (
         <div>
-            <h2 className="text-center text-5xl mt-10 mb-10">All Toys</h2>
+            <h2 className="text-center text-white text-5xl mt-10 mb-10">All Toys</h2>
             <div className="flex justify-center mb-6">
                 <input
                     type="text"
