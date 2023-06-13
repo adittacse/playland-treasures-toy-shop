@@ -95,7 +95,7 @@ const SignUp = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h1 className="text-4xl font-bold text-center mb-10">Sign Up Here!</h1>
+                        <h1 className="text-4xl font-bold text-center mb-10">Sign Up Here</h1>
                         <form onSubmit={handleSignUp}>
                             <div className="form-control mb-5">
                                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
